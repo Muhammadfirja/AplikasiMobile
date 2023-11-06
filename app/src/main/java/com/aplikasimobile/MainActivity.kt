@@ -1,5 +1,6 @@
 package com.aplikasimobile
 
+import Quiz
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -46,6 +47,9 @@ fun ScreenMain() {
         composable(Routes.Settings.route + "/{no}") { navBackStack ->
             val number = navBackStack.arguments?.getString("no")
             Settings(number = number)
+        }
+        composable(Routes.Quiz.route) {
+            Quiz(navController = navController)
         }
     }
 }
