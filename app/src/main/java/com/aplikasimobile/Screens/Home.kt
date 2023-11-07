@@ -39,6 +39,9 @@ fun Home(navController: NavHostController){
             Button(onClick = { navController.navigate(Routes.Settings.route + "/$angka") }) {
                 Text(text = "Navigate to Settings", color = Color.Black)
             }
+            Button(onClick = { navController.navigate(Routes.Quiz.route) }) {
+                Text(text = "Fakta Menarik", color = Color.Black)
+            }
         }
     }
 }
